@@ -46,7 +46,6 @@
             gap: 10px;
         }
 
-        /* Mini foto real en el logo */
         .logo-avatar {
             width: 38px;
             height: 38px;
@@ -444,84 +443,96 @@
             margin-top: 10px;
         }
 
-        /* Testimonials */
-        .testimonials {
+        /* --- NUEVO ESTILO: SIMULADOR DE CHAT DE WHATSAPP --- */
+        .whatsapp-section {
             padding: 4rem 1rem;
-            background: linear-gradient(180deg, #edf2f7 0%, #e2e8f0 100%);
+            background: #efeae2; /* Fondo típico de WhatsApp Web */
         }
 
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        .whatsapp-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #f0f2f5;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            overflow: hidden;
+            border: 1px solid #d1d7db;
         }
 
-        .testimonial-card {
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            border-top: 4px solid #667eea;
-        }
-
-        .testimonial-header {
+        .whatsapp-header-bar {
+            background: #005e54;
+            color: white;
+            padding: 12px 16px;
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            gap: 12px;
         }
 
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
+        .whatsapp-header-avatar {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 15px;
-            border: 3px solid #fff;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
         }
 
-        .testimonial-user-info h4 {
+        .whatsapp-header-info h3 {
+            font-size: 1rem;
             margin: 0;
-            color: #1a202c;
-            font-size: 1.1rem;
         }
 
-        .testimonial-handle {
-            font-size: 0.85rem;
-            color: #4a5568;
-            font-weight: 500;
-        }
-
-        .testimonial-badge-peso {
-            background: #d4edda;
-            color: #155724;
+        .whatsapp-header-info span {
             font-size: 0.75rem;
+            color: #e2e2e2;
+        }
+
+        .whatsapp-body {
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background-image: radial-gradient(#cbd5e0 0.75px, transparent 0.75px);
+            background-size: 15px 15px;
+        }
+
+        .wa-message {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            position: relative;
+            box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+        }
+
+        .wa-message.incoming {
+            background: #ffffff;
+            align-self: flex-start;
+            border-top-left-radius: 0;
+        }
+
+        .wa-message.outgoing {
+            background: #d9fdd3;
+            align-self: flex-end;
+            border-top-right-radius: 0;
+        }
+
+        .wa-sender {
             font-weight: bold;
-            padding: 3px 9px;
-            border-radius: 6px;
-            display: inline-block;
+            font-size: 0.8rem;
+            color: #00a884;
+            margin-bottom: 2px;
+        }
+
+        .wa-time {
+            font-size: 0.65rem;
+            color: #667781;
+            float: right;
+            margin-left: 10px;
             margin-top: 4px;
         }
 
-        .testimonial-stars {
-            color: #f6ad55;
-            font-size: 1rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .testimonial-card p {
-            font-size: 0.95rem;
-            color: #2d3748;
-            line-height: 1.6;
-            background: #f7fafc;
-            padding: 12px 15px;
-            border-radius: 12px;
-            border-left: 3px solid #cbd5e0;
+        .wa-check {
+            color: #53bdeb;
+            font-weight: bold;
         }
 
         /* Guarantee */
@@ -575,18 +586,17 @@
 </head>
 <body>
 
-    <!-- Header con foto real en lugar de la ensaladera -->
+    <!-- Header -->
     <header>
         <nav>
             <div class="logo-container">
-                <!-- Foto miniatura real de una persona -->
                 <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Creadora NutriDelicias" class="logo-avatar">
                 <div class="logo">NutriDelicias</div>
             </div>
             <div class="nav-links">
                 <a href="#beneficios">Beneficios</a>
                 <a href="#recetas">Recetas</a>
-                <a href="#testimonios">Testimonios</a>
+                <a href="#testimonios">Comunidad</a>
                 <a href="#descargar">Obtener</a>
             </div>
         </nav>
@@ -808,61 +818,50 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonios">
+    <!-- Simulador de Mensajes Reales del Grupo de WhatsApp -->
+    <section class="whatsapp-section" id="testimonios">
         <div class="container">
-            <h2 class="section-title">Lo que dicen en nuestra comunidad</h2>
-            <div class="testimonial-grid">
-                
-                <!-- Testimonio 1 -->
-                <div class="testimonial-card">
-                    <div>
-                        <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="María González" class="testimonial-avatar">
-                            <div class="testimonial-user-info">
-                               <h4>María González</h4>
-                               <span class="testimonial-handle">@mariagonzalez_fit</span><br>
-                               <span class="testimonial-badge-peso">📉 Bajó 12 kg</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Bajé 12 kg en 3 meses sin pasar nada de hambre. Lo que más me gusta es que las recetas son súper fáciles y mi familia también las come conmigo. ¡La mejor inversión!"</p>
+            <h2 class="section-title">Mensajes Reales del Grupo de WhatsApp</h2>
+            
+            <div class="whatsapp-container">
+                <!-- Barra superior de WhatsApp -->
+                <div class="whatsapp-header-bar">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Grupo" class="whatsapp-header-avatar">
+                    <div class="whatsapp-header-info">
+                        <h3>NutriDelicias | Grupo Oficial 🥗</h3>
+                        <span>350 miembros, 42 en línea</span>
                     </div>
                 </div>
 
-                <!-- Testimonio 2 -->
-                <div class="testimonial-card">
-                    <div>
-                        <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80" alt="Carlos Ramírez" class="testimonial-avatar">
-                            <div class="testimonial-user-info">
-                               <h4>Carlos Ramírez</h4>
-                               <span class="testimonial-handle">@carlos.fitlife</span><br>
-                               <span class="testimonial-badge-peso">📉 Bajó 8 kg</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Pensé que comer sano era aburrido y puro pollo con lechuga hasta que probé este recetario. Perdí 8 kg y tengo más energía para entrenar. ¡Totalmente recomendado!"</p>
+                <!-- Cuerpo de los mensajes -->
+                <div class="whatsapp-body">
+                    
+                    <div class="wa-message incoming">
+                        <div class="wa-sender">~ María González</div>
+                        ¡Hola a todos! Hoy me pesé y no lo puedo creer, **bajé 4 kg en mis primeras dos semanas** comiendo SÚPER rico y sin pasar hambre. ¡Gracias por las recetas! 🥰
+                        <span class="wa-time">10:14 a. m.</span>
                     </div>
-                </div>
 
-                <!-- Testimonio 3 -->
-                <div class="testimonial-card">
-                    <div>
-                        <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Ana Martínez" class="testimonial-avatar">
-                            <div class="testimonial-user-info">
-                               <h4>Ana Martínez</h4>
-                               <span class="testimonial-handle">@anita_recetas</span><br>
-                               <span class="testimonial-badge-peso">📉 Bajó 6 kg</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Como trabajo todo el día, necesitaba algo rápido. Estas recetas me salvan la vida porque se hacen en 20 minutos. Bajé 6 kg en 2 meses sin sufrir. ¡Mis hijos adoran los snacks!"</p>
+                    <div class="wa-message incoming">
+                        <div class="wa-sender">~ Carlos Ramírez</div>
+                        A mi esposa y a mí nos encantan los almuerzos rápidos. En el último mes **perdí 7 kg** y ya no tengo pesadez después de comer. ¡100 recomendadas! 🚀
+                        <span class="wa-time">10:18 a. m.</span>
                     </div>
-                </div>
 
+                    <div class="wa-message outgoing">
+                        ¡Qué alegría leer esto Carlos y María! 💪 Esa es la idea, comer sano sin sufrir. ¡A seguir con todo mi gente! 🔥🥗
+                        <span class="wa-time">10:20 a. m. <span class="wa-check">✓✓</span></span>
+                    </div>
+
+                    <div class="wa-message incoming">
+                        <div class="wa-sender">~ Ana Martínez</div>
+                        Yo sufría un montón con la ansiedad por los dulces por las tardes, pero los snacks del recetario me salvan la vida. **Ya bajé 5 kg** y sigo sumando. ✨
+                        <span class="wa-time">10:25 a. m.</span>
+                    </div>
+
+                </div>
             </div>
+
         </div>
     </section>
 
