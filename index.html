@@ -427,10 +427,10 @@
             margin-top: 10px;
         }
 
-        /* --- NUEVOS ESTILOS PARA TESTIMONIOS REALISTAS --- */
+        /* --- NUEVOS ESTILOS: TESTIMONIOS CON FONDO DIFERENTE Y FOTOS MÁS REALES (SELFIE) --- */
         .testimonials {
             padding: 4rem 1rem;
-            background: #f8f9fa;
+            background: linear-gradient(180deg, #edf2f7 0%, #e2e8f0 100%); /* Fondo contrastante para resaltar */
         }
 
         .testimonial-grid {
@@ -441,14 +441,15 @@
         }
 
         .testimonial-card {
-            background: white;
+            background: #ffffff;
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border: 1px solid #edf2f7;
+            position: relative;
+            border-top: 4px solid #667eea;
         }
 
         .testimonial-header {
@@ -458,47 +459,52 @@
         }
 
         .testimonial-avatar {
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
             margin-right: 15px;
-            border: 2px solid #667eea;
+            border: 3px solid #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
         }
 
         .testimonial-user-info h4 {
             margin: 0;
-            color: #2c3e50;
-            font-size: 1.05rem;
+            color: #1a202c;
+            font-size: 1.1rem;
         }
 
         .testimonial-handle {
             font-size: 0.85rem;
-            color: #718096;
+            color: #4a5568;
+            font-weight: 500;
         }
 
         .testimonial-badge-peso {
-            background: #e6fffa;
-            color: #319795;
+            background: #d4edda;
+            color: #155724;
             font-size: 0.75rem;
             font-weight: bold;
-            padding: 3px 8px;
+            padding: 3px 9px;
             border-radius: 6px;
             display: inline-block;
-            margin-top: 3px;
+            margin-top: 4px;
         }
 
         .testimonial-stars {
             color: #f6ad55;
-            font-size: 0.9rem;
+            font-size: 1rem;
             margin-bottom: 0.8rem;
         }
 
         .testimonial-card p {
             font-size: 0.95rem;
-            color: #4a5568;
-            line-height: 1.5;
-            font-style: normal;
+            color: #2d3748;
+            line-height: 1.6;
+            background: #f7fafc;
+            padding: 12px 15px;
+            border-radius: 12px;
+            border-left: 3px solid #cbd5e0;
         }
 
         /* Guarantee */
@@ -781,17 +787,18 @@
         </div>
     </section>
 
-    <!-- Testimonials - Rediseñado Ultra Realista -->
+    <!-- Testimonials - Fotos Estilo Selfie y Fondo Diferente -->
     <section class="testimonials" id="testimonios">
         <div class="container">
-            <h2 class="section-title">Historias de Éxito Reales</h2>
+            <h2 class="section-title">Lo que dicen en nuestra comunidad</h2>
             <div class="testimonial-grid">
                 
                 <!-- Testimonio 1 -->
                 <div class="testimonial-card">
                     <div>
                         <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="María González" class="testimonial-avatar">
+                            <!-- Foto con aspecto más casual/selfie -->
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="María González" class="testimonial-avatar">
                             <div class="testimonial-user-info">
                                <h4>María González</h4>
                                <span class="testimonial-handle">@mariagonzalez_fit</span><br>
@@ -807,7 +814,8 @@
                 <div class="testimonial-card">
                     <div>
                         <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Carlos Ramírez" class="testimonial-avatar">
+                            <!-- Foto casual de perfil -->
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80" alt="Carlos Ramírez" class="testimonial-avatar">
                             <div class="testimonial-user-info">
                                <h4>Carlos Ramírez</h4>
                                <span class="testimonial-handle">@carlos.fitlife</span><br>
@@ -823,7 +831,8 @@
                 <div class="testimonial-card">
                     <div>
                         <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Ana Martínez" class="testimonial-avatar">
+                            <!-- Foto casual de perfil -->
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Ana Martínez" class="testimonial-avatar">
                             <div class="testimonial-user-info">
                                <h4>Ana Martínez</h4>
                                <span class="testimonial-handle">@anita_recetas</span><br>
@@ -888,4 +897,3 @@
     </script>
 </body>
 </html>
-
