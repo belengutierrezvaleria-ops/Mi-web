@@ -170,7 +170,7 @@
         }
 
         .recipe-image {
-            height: 200px;
+            position: relative; height: 200px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
@@ -178,7 +178,9 @@
             color: white;
             font-size: 4rem;
         }
-.recipe-image img { width: 100%; height: 100%; object-fit: cover; }
+.recipe-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; } .recipe-card:hover .recipe-image img { transform: scale(1.08); }
+.badge { position: absolute; top: 12px; right: 12px; background: #ff4757; color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; z-index: 2; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+
 
         .recipe-info {
             padding: 1.5rem;
@@ -438,7 +440,8 @@
             <h2 class="section-title">Un Vistazo a Lo Que Obtendrás</h2>
             <div class="recipes-grid">
                 <div class="recipe-card">
-                    <div class="recipe-image"><img src="IMG_2729.jpeg" alt="Desayunos Energéticos" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="recipe-image"><span class="badge">🔥 ¡Más Popular!</span><img src="IMG_2729.jpeg"></div>
+
 
                     <div class="recipe-info">
                         <h3>Desayunos Energéticos</h3>
@@ -449,7 +452,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="recipe-card">
+                <div class="recipe-image"><span class="badge">⚡ En 15 Min</span><img src="IMG_2730.jpeg"></div>
+
                     <div class="recipe-image"><img src="IMG_2730.jpeg" style="width:100%"></div>
 
                     <div class="recipe-info">
@@ -460,49 +464,50 @@
                             <span>🔥 350-500 cal</span>
                         </div>
                     </div>
-                </div>
-                <div class="recipe-card">
-                    <div class="recipe-image"><img src="IMG_2731.jpeg" style="width:100%"></div>
 
-                    <div class="recipe-info">
-                        <h3>Cenas Reconfortantes</h3>
-                        <p>30 recetas ligeras pero sabrosas para terminar el día perfecto.</p>
-                        <div class="recipe-meta">
-                            <span>⏱️ 20-30 min</span>
-                            <span>🔥 300-450 cal</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="recipe-card">
-                    <div class="recipe-image"><img src="IMG_2733.jpeg" style="width:100%"></div>
-
-
-                    <div class="recipe-info">
-                        <h3>Snacks Saludables</h3>
-                        <p>30 opciones para matar el hambre entre comidas sin arruinar tu dieta.</p>
-                        <div class="recipe-meta">
-                            <span>⏱️ 5-15 min</span>
-                            <span>🔥 100-200 cal</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="recipe-card">
+    <div class="recipe-image"><span class="badge">🥗 Bajo en Calorías</span><img src="IMG_2731.jpeg"></div>
+    <div class="recipe-info">
+        <h3>Cenas Reconfortantes</h3>
+        <p>30 recetas ligeras pero sabrosas para terminar el día perfecto.</p>
+        <div class="recipe-meta">
+            <span>⏱️ 20-30 min</span>
+            <span>🔥 300-450 cal</span>
         </div>
-    </section>
+    </div>
+</div>
 
-    <!-- Benefits List -->
-    <section class="benefits">
-        <div class="container">
-            <h2 class="section-title">Lo Que Lograrás Con Este Programa</h2>
-            <ul class="benefits-list">
-                <li>Perderás entre 2-4 kg por semana de forma saludable y sostenible</li>
-                <li>Mejorarás tu energía y vitalidad desde la primera semana</li>
-                <li>Aprenderás a comer rico sin sentir que estás a dieta</li>
-                <li>Reducirás la inflamación y te sentirás más ligero</li>
-                <li>Desarrollarás hábitos alimenticios que durarán toda la vida</li>
-                <li>Ahorrarás tiempo y dinero en comidas poco saludables</li>
-                <li>Mejorarás tu relación con la comida para siempre</li>
-            </ul>
+<div class="recipe-card">
+    <div class="recipe-image"><span class="badge">⭐ Recomendado</span><img src="IMG_2733.jpeg"></div>
+    <div class="recipe-info">
+        <h3>Snacks Saludables</h3>
+        <p>30 opciones para matar el hambre entre comidas sin arruinar tu dieta.</p>
+        <div class="recipe-meta">
+            <span>⏱️ 5-15 min</span>
+            <span>🔥 100-200 cal</span>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Benefits List -->
+<section class="benefits">
+<div class="container">
+    <h2 class="section-title">Lo Que Lograrás Con Este Programa</h2>
+    <ul class="benefits-list">
+        <li>Perderás entre 2-4 kg por semana de forma saludable</li>
+        <li>Mejorarás tu energía y vitalidad desde la primera semana</li>
+        <li>Aprenderás a comer rico sin sentir que estás a dieta</li>
+        <li>Reducirás la inflamación y te sentirás más ligero</li>
+        <li>Desarrollarás hábitos alimenticios duraderos</li>
+        <li>Ahorrarás tiempo y dinero en comidas preparadas</li>
+        <li>Mejorarás tu relación con la comida para siempre</li>
+    </ul>
+</div>
+
         </div>
     </section>
 
