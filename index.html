@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetario Fit - NutriDelicias</title>
+    <title>Recetario Fit - NutriDelicias (Edición Limitada)</title>
     <style>
         * {
             margin: 0;
@@ -17,18 +17,34 @@
             color: #333;
             background-color: #f8f9fa;
             padding-bottom: 60px;
+            scroll-behavior: smooth;
+        }
+
+        /* Top Urgency Banner */
+        .top-banner {
+            background: linear-gradient(90deg, #ff4757, #ff6b6b);
+            color: white;
+            text-align: center;
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1001;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
             color: white;
             padding: 0.8rem 0;
             position: fixed;
             width: 100%;
-            top: 0;
+            top: 36px; /* Deja espacio para la barra superior */
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         nav {
@@ -55,29 +71,31 @@
         }
 
         .logo-avatar {
-            width: 38px;
-            height: 38px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
         .logo {
-            font-size: 1.4rem;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
-            margin-left: 1.5rem;
+            margin-left: 1.2rem;
             font-size: 0.95rem;
+            font-weight: 500;
             transition: opacity 0.3s;
         }
 
         .nav-links a:hover {
-            opacity: 0.8;
+            opacity: 0.75;
         }
 
         .container {
@@ -88,80 +106,96 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             margin-bottom: 2.5rem;
-            color: #2c3e50;
+            color: #1e293b;
+            font-weight: 800;
         }
 
         /* Hero Section */
         .hero-container {
-            margin-top: 90px;
-            padding: 3rem 1rem;
+            margin-top: 130px;
+            padding: 4rem 1rem 3rem 1rem;
             text-align: center;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-bottom: 1px solid #cbd5e1;
         }
 
         .hero-main-image {
             width: 100%;
-            max-width: 450px;
+            max-width: 420px;
             height: auto;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
             margin: 1.5rem auto;
             display: block;
             object-fit: cover;
+            border: 4px solid white;
         }
 
         .hero h1 {
-            font-size: 2.3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #2c3e50;
-            line-height: 1.3;
+            color: #0f172a;
+            line-height: 1.25;
+            font-weight: 900;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             margin-bottom: 2rem;
-            max-width: 700px;
+            max-width: 750px;
             margin-left: auto;
             margin-right: auto;
-            color: #555;
+            color: #475569;
         }
 
         .cta-button {
             display: inline-block;
-            background: #ff6b6b;
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b6b 100%);
             color: white;
-            padding: 1rem 2.5rem;
+            padding: 1.1rem 2.8rem;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
+            font-size: 1.25rem;
+            font-weight: 800;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+            box-shadow: 0 6px 20px rgba(255,71,87,0.45);
             animation: latido 1.5s infinite ease-in-out;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255,107,107,0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(255,71,87,0.65);
+        }
+
+        @keyframes latido {
+            0% { transform: scale(1); box-shadow: 0 5px 20px rgba(255,71,87,0.3); }
+            50% { transform: scale(1.03); box-shadow: 0 10px 30px rgba(255,71,87,0.5); }
+            100% { transform: scale(1); box-shadow: 0 5px 20px rgba(255,71,87,0.3); }
         }
 
         /* Welcome Benefits Component */
         .welcome-benefits {
             background: white;
-            border-radius: 16px;
-            padding: 30px 20px;
-            margin: 40px auto;
-            max-width: 1200px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 20px;
+            padding: 35px 25px;
+            margin: -40px auto 40px auto;
+            max-width: 1100px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 10;
+            border: 1px solid #e2e8f0;
         }
 
         .welcome-benefits h2 {
             text-align: center;
-            color: #2c3e50;
-            font-size: 1.8rem;
+            color: #1e293b;
+            font-size: 1.9rem;
             margin-bottom: 25px;
+            font-weight: 800;
         }
 
         .benefits-grid {
@@ -171,71 +205,86 @@
         }
 
         .benefit-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
+            background: #f8fafc;
+            padding: 22px;
+            border-radius: 14px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-            border-left: 5px solid #ff4757;
+            border-left: 6px solid #4f46e5;
+            transition: transform 0.3s;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-3px);
         }
 
         .benefit-icon {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 10px;
             display: inline-block;
         }
 
         .benefit-item h4 {
             margin: 0 0 8px 0;
-            color: #333;
-            font-size: 1.2rem;
+            color: #1e293b;
+            font-size: 1.25rem;
+            font-weight: 700;
         }
 
         .benefit-item p {
             margin: 0;
-            color: #666;
-            font-size: 0.95rem;
+            color: #64748b;
+            font-size: 0.98rem;
         }
 
         /* Features */
         .features {
-            padding: 4rem 1rem;
+            padding: 5rem 1rem;
             background: #fff;
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            gap: 2.2rem;
         }
 
         .feature-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 12px;
+            background: #f8fafc;
+            padding: 2.2rem;
+            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e2e8f0;
         }
 
         .feature-card:hover {
             transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(79, 70, 229, 0.12);
+            border-color: #c7d2fe;
         }
 
         .feature-icon {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
         }
 
         .feature-card h3 {
-            color: #667eea;
+            color: #4f46e5;
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            font-size: 0.98rem;
         }
 
         /* Recipes Preview */
         .recipes {
-            padding: 4rem 1rem;
-            background: #f8f9fa;
+            padding: 5rem 1rem;
+            background: #f1f5f9;
         }
 
         .recipes-grid {
@@ -246,33 +295,34 @@
 
         .recipe-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e2e8f0;
         }
 
         .recipe-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .recipe-image {
             position: relative;
-            height: 200px;
+            height: 210px;
             overflow: hidden;
-            background: #ddd;
+            background: #cbd5e1;
         }
 
         .recipe-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.4s ease;
+            transition: transform 0.5s ease;
         }
 
         .recipe-card:hover .recipe-image img {
-            transform: scale(1.08);
+            transform: scale(1.1);
         }
 
         .badge {
@@ -281,12 +331,12 @@
             right: 12px;
             background: #ff4757;
             color: white;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.75rem;
-            font-weight: bold;
+            font-weight: 800;
             z-index: 2;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.25);
         }
 
         .recipe-info {
@@ -294,31 +344,33 @@
         }
 
         .recipe-info h3 {
-            color: #2c3e50;
+            color: #1e293b;
             margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            font-weight: 700;
         }
 
         .recipe-info p {
             font-size: 0.95rem;
-            color: #666;
+            color: #64748b;
             margin-bottom: 1rem;
         }
 
         .recipe-meta {
             display: flex;
             justify-content: space-between;
-            color: #7f8c8d;
+            color: #64748b;
             font-size: 0.85rem;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
+            font-weight: 600;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 12px;
         }
 
         /* Benefits List Section */
         .benefits-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
             color: white;
-            padding: 4rem 1rem;
+            padding: 5rem 1rem;
         }
 
         .benefits-section .section-title {
@@ -332,17 +384,18 @@
         }
 
         .benefits-list li {
-            padding: 0.8rem 0;
-            padding-left: 2.5rem;
+            padding: 0.9rem 0;
+            padding-left: 2.8rem;
             position: relative;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            font-weight: 500;
         }
 
         .benefits-list li:before {
             content: "✓";
             position: absolute;
             left: 0;
-            background: #4CAF50;
+            background: #10b981;
             width: 1.8rem;
             height: 1.8rem;
             border-radius: 50%;
@@ -351,11 +404,12 @@
             justify-content: center;
             font-weight: bold;
             color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
 
         /* Lead Magnet & Payment Form */
         .lead-magnet {
-            padding: 4rem 1rem;
+            padding: 5rem 1rem;
             background: #fff;
             text-align: center;
         }
@@ -363,121 +417,125 @@
         .lead-form {
             max-width: 600px;
             margin: 2rem auto;
-            padding: 2rem;
-            background: #f8f9fa;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+            background: #f8fafc;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             text-align: left;
+            border: 1px solid #e2e8f0;
         }
 
         .form-group {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.3rem;
         }
 
         .form-group input {
             width: 100%;
-            padding: 0.9rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
+            padding: 1rem;
+            border: 2px solid #cbd5e1;
+            border-radius: 10px;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
 
         .form-group input:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
         }
 
         .submit-btn {
             width: 100%;
-            padding: 1rem;
-            background: #ff6b6b;
+            padding: 1.1rem;
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b6b 100%);
             color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            border-radius: 10px;
+            font-size: 1.15rem;
+            font-weight: 800;
             cursor: pointer;
-            transition: background 0.3s;
-            animation: latido 1.5s infinite ease-in-out;
+            transition: transform 0.3s, opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.4);
+            text-transform: uppercase;
         }
 
         .submit-btn:hover {
-            background: #ff5252;
-        }
-
-        @keyframes latido {
-            0% { transform: scale(1); box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-            50% { transform: scale(1.01); box-shadow: 0 8px 30px rgba(255,107,107,0.3); border-color: #ff6b6b; }
-            100% { transform: scale(1); box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
 
         .payment-box {
             background: #ffffff;
-            padding: 25px;
-            border-radius: 12px;
-            margin: 30px auto;
+            padding: 30px;
+            border-radius: 18px;
+            margin: 35px auto;
             max-width: 600px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border: 2px solid #e2e8f0;
-            animation: latido 2.5s infinite ease-in-out;
         }
 
         .payment-box h3 {
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: #1e293b;
+            font-size: 1.4rem;
+            font-weight: 800;
         }
 
         .total-amount {
             margin-bottom: 20px;
-            padding: 12px;
-            background: #e8f4fd;
-            border-radius: 8px;
-            font-size: 18px;
-            color: #2c3e50;
-            font-weight: bold;
+            padding: 15px;
+            background: #e0e7ff;
+            border-radius: 10px;
+            font-size: 20px;
+            color: #3730a3;
+            font-weight: 800;
         }
 
         .bank-transfer {
             margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            padding: 18px;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
             text-align: left;
         }
 
         .paypal-section {
-            padding: 15px;
-            background: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            padding: 18px;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
         }
 
         .paypal-btn {
             display: inline-block;
             background-color: #0070ba;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
             margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .paypal-btn:hover {
+            background-color: #005ea6;
         }
 
         /* Simulador de Chat de WhatsApp */
         .whatsapp-section {
-            padding: 4rem 1rem;
-            background: #efeae2;
+            padding: 5rem 1rem;
+            background: #e5ddd5;
         }
 
         .whatsapp-container {
             max-width: 700px;
             margin: 0 auto;
             background: #f0f2f5;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
             overflow: hidden;
             border: 1px solid #d1d7db;
         }
@@ -485,45 +543,46 @@
         .whatsapp-header-bar {
             background: #005e54;
             color: white;
-            padding: 12px 16px;
+            padding: 14px 18px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
         }
 
         .whatsapp-header-avatar {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             object-fit: cover;
         }
 
         .whatsapp-header-info h3 {
-            font-size: 1rem;
+            font-size: 1.05rem;
             margin: 0;
+            font-weight: 700;
         }
 
         .whatsapp-header-info span {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: #e2e2e2;
         }
 
         .whatsapp-body {
-            padding: 20px 15px;
+            padding: 22px 16px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            background-image: radial-gradient(#cbd5e0 0.75px, transparent 0.75px);
-            background-size: 15px 15px;
+            gap: 14px;
+            background-image: radial-gradient(#cbd5e0 0.8px, transparent 0.8px);
+            background-size: 16px 16px;
         }
 
         .wa-message {
             max-width: 85%;
-            padding: 10px 14px;
-            border-radius: 8px;
-            font-size: 0.92rem;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 0.95rem;
             position: relative;
-            box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         }
 
         .wa-message.incoming {
@@ -540,17 +599,17 @@
 
         .wa-sender {
             font-weight: bold;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             color: #00a884;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         .wa-time {
-            font-size: 0.65rem;
+            font-size: 0.68rem;
             color: #667781;
             float: right;
-            margin-left: 10px;
-            margin-top: 4px;
+            margin-left: 12px;
+            margin-top: 5px;
         }
 
         .wa-check {
@@ -558,71 +617,136 @@
             font-weight: bold;
         }
 
+        /* Sección FAQ (Preguntas Frecuentes) */
+        .faq-section {
+            padding: 5rem 1rem;
+            background: #f8fafc;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        .faq-item h4 {
+            color: #1e293b;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .faq-item p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            z-index: 1002;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
         /* Guarantee */
         .guarantee {
-            padding: 3rem 1rem;
-            background: #2c3e50;
+            padding: 4rem 1rem;
+            background: #0f172a;
             color: white;
             text-align: center;
         }
 
         .guarantee-icon {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 1rem;
         }
 
         /* Footer */
         footer {
-            background: #1a252f;
+            background: #090d16;
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
         }
 
         footer a {
-            color: #3498db;
+            color: #60a5fa;
             text-decoration: none;
         }
 
         @media (min-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
+            .hero h1 { font-size: 3rem; }
             .hero p { font-size: 1.4rem; }
             .benefits-grid { flex-direction: row; }
-            .benefit-item { flex: 1; text-align: center; border-left: none; border-top: 5px solid #ff4757; }
+            .benefit-item { flex: 1; text-align: center; border-left: none; border-top: 6px solid #4f46e5; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Urgency Banner -->
+    <div class="top-banner">
+        🔥 ¡OFERTA FLASH! 70% DE DESCUENTO SOLO POR HOY + 2 BONUS EXCLUSIVOS 🎁
+    </div>
+
     <!-- Header -->
     <header>
         <nav>
             <div class="logo-container">
-                <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=150&q=80" alt="Fit Abdomen" class="logo-avatar">
+                <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=150&q=80" alt="Avatar Logo" class="logo-avatar">
                 <div class="logo">NutriDelicias</div>
             </div>
             <div class="nav-links">
                 <a href="#beneficios">Beneficios</a>
                 <a href="#recetas">Recetas</a>
                 <a href="#testimonios">Comunidad</a>
-                <a href="#descargar">Obtener</a>
+                <a href="#faq">Dudas</a>
+                <a href="#descargar" style="background: #ff4757; padding: 6px 15px; border-radius: 20px;">¡Comprar!</a>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section con Gancho Mejorado -->
+    <!-- Hero Section -->
     <div class="hero-container">
         <div class="container">
             <div class="hero">
                 <h1>¿Y si adelgazar fuera tan rico que te olvidaras de que estás a dieta? 🔥</h1>
-                <p>Desbloquea el acceso a 120 recetas irresistibles, saciantes y rápidas diseñadas para transformar tu cuerpo sin pasar hambre ni sufrir restricciones.</p>
+                <p>Desbloquea el acceso inmediato a 120 recetas irresistibles, saciantes y rápidas diseñadas para transformar tu cuerpo sin pasar hambre ni sufrir restricciones.</p>
                 
                 <!-- IMAGEN PRINCIPAL (IMG_2851) -->
                 <img src="IMG_2851.jpeg" alt="120 Recetas Saludables" class="hero-main-image">
 
                 <a href="#descargar" class="cta-button">
                     ¡QUIERO MIS RECETAS AHORA!<br>
-                    <span style="font-size: 0.9rem; font-weight: normal;">¡DESCUBRE MÁS RECETAS AQUÍ!</span>
+                    <span style="font-size: 0.9rem; font-weight: normal;">(Acceso Digital Inmediato 📲)</span>
                 </a>
             </div>
         </div>
@@ -636,17 +760,17 @@
                 <div class="benefit-item">
                     <span class="benefit-icon">🍽️</span>
                     <h4>Sin pasar hambre</h4>
-                    <p>Porciones generosas y saciantes que te mantendrán lleno hasta la cena.</p>
+                    <p>Porciones generosas y saciantes que te mantendrán lleno hasta la cena sin ansiedad.</p>
                 </div>
                 <div class="benefit-item">
                     <span class="benefit-icon">⏱️</span>
                     <h4>Ahorra tiempo</h4>
-                    <p>Platos deliciosos y rápidos listos en menos de 30 minutos.</p>
+                    <p>Platos deliciosos y súper rápidos listos en menos de 30 minutos.</p>
                 </div>
                 <div class="benefit-item">
                     <span class="benefit-icon">🛒</span>
                     <h4>Supermercado fácil</h4>
-                    <p>Ingredientes comunes, accesibles y económicos que ya conoces.</p>
+                    <p>Ingredientes comunes, accesibles y económicos que consigues en cualquier tienda.</p>
                 </div>
             </div>
         </div>
@@ -665,7 +789,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
                     <h3>Rápidas y Fáciles</h3>
-                    <p>Preparaciones en menos de 30 minutos con ingredientes accesibles.</p>
+                    <p>Preparaciones en menos de 30 minutos con ingredientes accesibles para el día a día.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
@@ -675,7 +799,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
                     <h3>Información Nutricional</h3>
-                    <p>Cada receta incluye calorías, macronutrientes y porciones para controlar tu progreso.</p>
+                    <p>Cada receta incluye conteo de calorías, macronutrientes y porciones exactas.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
@@ -685,7 +809,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>Acceso Inmediato</h3>
-                    <p>Descarga digital instantánea. Accede desde tu móvil, tablet o computadora.</p>
+                    <p>Descarga digital instantánea en PDF. Accede desde tu móvil, tablet o computadora.</p>
                 </div>
             </div>
         </div>
@@ -719,7 +843,7 @@
                     </div>
                     <div class="recipe-info">
                         <h3>Almuerzos Ligeros</h3>
-                        <p>35 opciones deliciosas que te mantendrán satisfecho hasta la cena.</p>
+                        <p>35 opciones deliciosas que te mantendrán satisfecho sin culpas.</p>
                         <div class="recipe-meta">
                             <span>⏱️ 15-30 min</span>
                             <span>🔥 350-500 cal</span>
@@ -766,12 +890,12 @@
         <div class="container">
             <h2 class="section-title">Lo Que Lograrás Con Este Programa</h2>
             <ul class="benefits-list">
-                <li>Perderás entre 2-4 kg por semana de forma saludable</li>
+                <li>Perderás entre 2-4 kg por semana de forma completamente saludable</li>
                 <li>Mejorarás tu energía y vitalidad desde la primera semana</li>
-                <li>Aprenderás a comer rico sin sentir que estás a dieta</li>
-                <li>Reducirás la inflamación y te sentirás más ligero</li>
-                <li>Desarrollarás hábitos alimenticios duraderos</li>
-                <li>Ahorrarás tiempo y dinero en comidas preparadas</li>
+                <li>Aprenderás a comer rico sin sentir jamás que estás a dieta</li>
+                <li>Reducirás la inflamación abdominal y te sentirás mucho más ligero/a</li>
+                <li>Desarrollarás hábitos alimenticios duraderos para toda la vida</li>
+                <li>Ahorrarás tiempo y dinero planificando tus comidas semanales</li>
                 <li>Mejorarás tu relación con la comida para siempre</li>
             </ul>
         </div>
@@ -782,7 +906,7 @@
         <div class="container">
             <h2 class="section-title">¡Comienza Tu Transformación Hoy!</h2>
             <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Obtén acceso inmediato a las 120 recetas + <strong>BONUS GRATIS</strong>:</p>
-            <p style="color: #667eea; font-weight: bold; margin-bottom: 2rem;">📕 Guía de Compras Inteligente + 📅 Plan de 7 Días</p>
+            <p style="color: #4f46e5; font-weight: bold; margin-bottom: 2rem;">📕 Guía de Compras Inteligente + 📅 Planificador Semanal de 7 Días</p>
             
             <div class="lead-form">
                 <form id="purchase-form">
@@ -793,19 +917,19 @@
                         <input type="email" placeholder="Tu Mejor Correo Electrónico" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Tu WhatsApp (opcional pero recomendado)">
+                        <input type="tel" placeholder="Tu WhatsApp (para enviarte el acceso directo)">
                     </div>
                     <button type="submit" class="submit-btn">
                         🎁 SÍ, QUIERO MIS 120 RECETAS AHORA
                     </button>
-                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #7f8c8d; text-align: center;">
-                        🔒 Tu información está 100% segura. Sin spam.
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #64748b; text-align: center;">
+                        🔒 Tu información está 100% segura. Cero spam garantizado.
                     </p>
                 </form>
             </div>
             
-            <p style="color: #e74c3c; font-weight: bold; font-size: 1.1rem; margin-top: 1.5rem;">
-                ⚡ Oferta Especial: Solo $20 USD (Precio regular $47)
+            <p style="color: #ff4757; font-weight: bold; font-size: 1.2rem; margin-top: 1.5rem;">
+                ⚡ Oferta Especial por Tiempo Limitado: Solo $20 USD <span style="text-decoration: line-through; color: #94a3b8; font-size: 1rem;">($47 USD)</span>
             </p>
 
             <!-- Métodos de Pago -->
@@ -817,15 +941,15 @@
                 </div>
 
                 <div class="bank-transfer">
-                    <p style="margin: 0 0 10px 0; font-weight: bold; color: #27ae60;">Transferencia Bancaria</p>
+                    <p style="margin: 0 0 10px 0; font-weight: bold; color: #10b981;">Transferencia Bancaria Directa</p>
                     <p style="margin: 5px 0;"><strong>Banco:</strong> Santander</p>
                     <p style="margin: 5px 0;"><strong>CBU:</strong> 0720369388000000895554</p>
                     <p style="margin: 5px 0;"><strong>Alias:</strong> CASES.MANCHE.TELAS</p>
                 </div>
 
                 <div class="paypal-section">
-                    <p style="margin: 0 0 5px 0; font-weight: bold; color: #0070ba;">Pago con PayPal</p>
-                    <a href="https://paypal.me/valeriagutierrez548" target="_blank" class="paypal-btn">Pagar por PayPal.Me</a>
+                    <p style="margin: 0 0 5px 0; font-weight: bold; color: #0070ba;">Pago Seguro con PayPal</p>
+                    <a href="https://paypal.me/valeriagutierrez548" target="_blank" class="paypal-btn">Pagar $20 USD por PayPal.Me</a>
                 </div>
             </div>
 
@@ -841,7 +965,7 @@
                 <div class="whatsapp-header-bar">
                     <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=150&q=80" alt="Grupo" class="whatsapp-header-avatar">
                     <div class="whatsapp-header-info">
-                        <h3>NutriDelicias | Grupo Oficial 🥗</h3>
+                        <h3>NutriDelicias | Comunidad Oficial 🥗</h3>
                         <span>350 miembros, 42 en línea</span>
                     </div>
                 </div>
@@ -874,14 +998,40 @@
         </div>
     </section>
 
+    <!-- Sección de Preguntas Frecuentes (FAQ) -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>¿Cómo recibo el recetario después de pagar?</h4>
+                    <p>El acceso es 100% digital e inmediato. Una vez que realizas el pago (por transferencia o PayPal), recibirás el recetario directamente en tu correo electrónico o WhatsApp en formato PDF listo para descargar.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Necesito comprar ingredientes caros o difíciles?</h4>
+                    <p>¡Para nada! Todas las recetas están pensadas con ingredientes comunes que encuentras en cualquier supermercado o verdulería de barrio, cuidando siempre tu bolsillo.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Sirve si no tengo tiempo para cocinar?</h4>
+                    <p>Sí, la gran mayoría de las preparaciones toman entre 10 y 25 minutos como máximo, ideales para personas con rutinas ocupadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Guarantee -->
     <section class="guarantee">
         <div class="container">
             <div class="guarantee-icon">🛡️</div>
-            <h2>Garantía de 30 Días</h2>
-            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: #ddd;">Si en los primeros 30 días no ves resultados o sientes que el recetario no es para ti, te devolvemos el 100% de tu dinero sin preguntas.</p>
+            <h2>Garantía de Satisfacción de 30 Días</h2>
+            <p style="font-size: 1.15rem; max-width: 650px; margin: 0 auto; color: #cbd5e1;">Si en los primeros 30 días no ves resultados o sientes que el recetario no cumple tus expectativas, te devolvemos el 100% de tu dinero sin hacer preguntas.</p>
         </div>
     </section>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/?text=Hola!%20Quiero%20más%20información%20sobre%20el%20Recetario%20Fit%20NutriDelicias" target="_blank" class="whatsapp-float" title="Escríbenos por WhatsApp">
+        💬
+    </a>
 
     <!-- Footer -->
     <footer>
