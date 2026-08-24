@@ -3,66 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>120 Recetas Saludables - Baja de Peso Sin Pasar Hambre</title>
-    </head>
-    <style>
-  img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-</style>
-
-<body>
-<div class="welcome-benefits">
-    <h2>🎯 Lo que vas a lograr con NutriDelicias</h2>
-    <div class="benefits-grid">
-        <div class="benefit-item">
-            <span class="benefit-icon">🍽️</span>
-            <h4>Sin pasar hambre</h4>
-            <p>Porciones generosas y saciantes que te mantendrán lleno hasta la cena.</p>
-        </div>
-        <div class="benefit-item">
-            <span class="benefit-icon">⏱️</span>
-            <h4>Ahorra tiempo</h4>
-            <p>Platos deliciosos y rápidos listos en menos de 30 minutos.</p>
-        </div>
-        <div class="benefit-item">
-            <span class="benefit-icon">🛒</span>
-            <h4>Supermercado fácil</h4>
-            <p>Ingredientes comunes, accesibles y económicos que ya conoces.</p>
-        </div>
-    </div>
-</div>
-<div class="recipe-carousel-container">
-    <h3>✨ Algunas de nuestras estrellas</h3>
-    <div class="carousel-track">
-        <div class="carousel-card">
-            <img src="IMG_2639.jpeg" alt="Bowl Detox">
-            <div class="carousel-card-content">
-                <h4>Bowl Detox</h4>
-                <p>Fresco, rápido y lleno de energía.</p>
-            </div>
-        </div>
-        <div class="carousel-card">
-            <img src="IMG_2640.jpeg" alt="Wrap Integral">
-            <div class="carousel-card-content">
-                <h4>Wrap Integral</h4>
-                <p>Ideal para llevar al trabajo.</p>
-            </div>
-        </div>
-        <div class="carousel-card">
-            <img src="IMG_2641.jpeg" alt="Ensalada César Fit">
-            <div class="carousel-card-content">
-                <h4>Ensalada César Fit</h4>
-                <p>Con aderezo saludable y crujiente.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
+    <title>120 Recetas Saludables - NutriDelicias</title>
     <style>
         * {
             margin: 0;
@@ -74,6 +15,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: #f8f9fa;
+            padding-bottom: 60px; /* Espacio para la barra de urgencia */
         }
 
         /* Header */
@@ -113,39 +56,60 @@
             opacity: 0.8;
         }
 
-        /* Hero Section */
-        .hero {
-            margin-top: 60px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234CAF50" width="1200" height="600"/><path fill="%238BC34A" d="M0 300Q300 250 600 300T1200 300V600H0Z"/></svg>');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 6rem 2rem;
+        /* Contenedores generales */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
             text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+            color: #2c3e50;
+        }
+
+        /* Hero Section */
+        .hero-container {
+            margin-top: 90px;
+            padding: 3rem 1rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            margin-bottom: 2rem;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #2c3e50;
         }
 
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
-            max-width: 800px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            color: #555;
         }
 
         .cta-button {
             display: inline-block;
             background: #ff6b6b;
             color: white;
-            padding: 1rem 3rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: bold;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 15px rgba(255,107,107,0.4);
@@ -156,64 +120,101 @@
             box-shadow: 0 6px 20px rgba(255,107,107,0.6);
         }
 
-        /* Features */
-        .features {
-            padding: 4rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .container {
+        /* Welcome Benefits Section */
+        .welcome-benefits {
+            background: white;
+            border-radius: 16px;
+            padding: 30px 20px;
+            margin: 40px auto;
             max-width: 1200px;
-            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        .section-title {
+        .welcome-benefits h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
             color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        .benefits-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .benefit-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            border-left: 5px solid #ff4757;
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .benefit-item h4 {
+            margin: 0 0 8px 0;
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .benefit-item p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Features / Why Need It */
+        .features {
+            padding: 4rem 1rem;
+            background: #fff;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
         .feature-card {
-            background: white;
+            background: #f8f9fa;
             padding: 2rem;
-            border-radius: 10px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s;
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
         }
 
         .feature-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
         .feature-card h3 {
             color: #667eea;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         /* Recipes Preview */
         .recipes {
-            padding: 4rem 2rem;
+            padding: 4rem 1rem;
+            background: #f8f9fa;
         }
 
         .recipes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         .recipe-card {
@@ -221,25 +222,45 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .recipe-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
         .recipe-image {
-            position: relative; height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background: #ddd;
         }
-.recipe-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; } .recipe-card:hover .recipe-image img { transform: scale(1.08); }
-.badge { position: absolute; top: 12px; right: 12px; background: #ff4757; color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; z-index: 2; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
 
+        .recipe-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .recipe-card:hover .recipe-image img {
+            transform: scale(1.08);
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #ff4757;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            z-index: 2;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
 
         .recipe-info {
             padding: 1.5rem;
@@ -248,24 +269,32 @@
         .recipe-info h3 {
             color: #2c3e50;
             margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .recipe-info p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
         }
 
         .recipe-meta {
             display: flex;
             justify-content: space-between;
             color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-top: 1rem;
+            font-size: 0.85rem;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
         }
 
-        /* Benefits */
-        .benefits {
+        /* Benefits List Section */
+        .benefits-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 4rem 2rem;
+            padding: 4rem 1rem;
         }
 
-        .benefits .section-title {
+        .benefits-section .section-title {
             color: white;
         }
 
@@ -276,10 +305,10 @@
         }
 
         .benefits-list li {
-            padding: 1rem 0;
-            padding-left: 3rem;
+            padding: 0.8rem 0;
+            padding-left: 2.5rem;
             position: relative;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .benefits-list li:before {
@@ -287,18 +316,19 @@
             position: absolute;
             left: 0;
             background: #4CAF50;
-            width: 2rem;
-            height: 2rem;
+            width: 1.8rem;
+            height: 1.8rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            color: white;
         }
 
-        /* Lead Magnet */
+        /* Lead Magnet / Checkout Form */
         .lead-magnet {
-            padding: 4rem 2rem;
+            padding: 4rem 1rem;
             background: #fff;
             text-align: center;
         }
@@ -309,16 +339,17 @@
             padding: 2rem;
             background: #f8f9fa;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: left;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .form-group input {
             width: 100%;
-            padding: 1rem;
+            padding: 0.9rem;
             border: 2px solid #ddd;
             border-radius: 8px;
             font-size: 1rem;
@@ -337,7 +368,7 @@
             color: white;
             border: none;
             border-radius: 8px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s;
@@ -347,15 +378,69 @@
             background: #ff5252;
         }
 
+        /* Payment Methods Box */
+        .payment-box {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .payment-box h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .total-amount {
+            margin-bottom: 20px;
+            padding: 12px;
+            background: #e8f4fd;
+            border-radius: 8px;
+            font-size: 18px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .bank-transfer {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .paypal-section {
+            padding: 15px;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .paypal-btn {
+            display: inline-block;
+            background-color: #0070ba;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
         /* Testimonials */
         .testimonials {
-            padding: 4rem 2rem;
+            padding: 4rem 1rem;
             background: #f8f9fa;
         }
 
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -364,7 +449,7 @@
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
 
         .testimonial-card p {
@@ -380,14 +465,14 @@
 
         /* Guarantee */
         .guarantee {
-            padding: 3rem 2rem;
+            padding: 3rem 1rem;
             background: #2c3e50;
             color: white;
             text-align: center;
         }
 
         .guarantee-icon {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
         }
 
@@ -396,7 +481,12 @@
             background: #1a252f;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1rem;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
         }
 
         /* Urgency Banner */
@@ -404,27 +494,22 @@
             background: #ff6b6b;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 0.8rem;
             font-weight: bold;
             position: fixed;
             bottom: 0;
             width: 100%;
             z-index: 1000;
+            font-size: 0.95rem;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
+        /* Media Queries para PC */
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.4rem; }
+            .benefits-grid { flex-direction: row; }
+            .benefit-item { flex: 1; text-align: center; border-left: none; border-top: 5px solid #ff4757; }
         }
     </style>
 </head>
@@ -433,26 +518,51 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo"> NutriDelicias</div>
+            <div class="logo">🥗 NutriDelicias</div>
             <div class="nav-links">
                 <a href="#beneficios">Beneficios</a>
                 <a href="#recetas">Recetas</a>
                 <a href="#testimonios">Testimonios</a>
-                <a href="#descargar">Descargar Ahora</a>
+                <a href="#descargar">Obtener</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <div style="text-align: center; margin: 25px auto; max-width: 90%;">
-  <img src="IMG_2634.jpeg" alt="Recetario NutriDelicias" style="width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-</div>
+    <div class="hero-container">
+        <div class="container">
+            <img src="IMG_2634.jpeg" alt="Recetario NutriDelicias" class="hero-img">
+            <div class="hero">
+                <h1>120 Recetas Saludables para Bajar de Peso</h1>
+                <p>Descubre cómo perder kilos disfrutando de comidas deliciosas, sin pasar hambre ni sufrir con dietas aburridas.</p>
+                <a href="#descargar" class="cta-button">¡QUIERO MIS RECETAS AHORA!</a>
+            </div>
+        </div>
+    </div>
 
-    <section class="hero">
-        <h1>120 Recetas Saludables para Bajar de Peso</h1>
-        <p>Descubre cómo perder kilos disfrutando de comidas deliciosas, sin pasar hambre ni sufrir con dietas aburridas</p>
-        <a href="#descargar" class="cta-button">¡QUIERO MIS RECETAS AHORA!</a>
-    </section>
+    <!-- Welcome Benefits Component -->
+    <div class="container">
+        <div class="welcome-benefits">
+            <h2>🎯 Lo que vas a lograr con NutriDelicias</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="benefit-icon">🍽️</span>
+                    <h4>Sin pasar hambre</h4>
+                    <p>Porciones generosas y saciantes que te mantendrán lleno hasta la cena.</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">⏱️</span>
+                    <h4>Ahorra tiempo</h4>
+                    <p>Platos deliciosos y rápidos listos en menos de 30 minutos.</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🛒</span>
+                    <h4>Supermercado fácil</h4>
+                    <p>Ingredientes comunes, accesibles y económicos que ya conoces.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Features -->
     <section class="features" id="beneficios">
@@ -467,7 +577,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
                     <h3>Rápidas y Fáciles</h3>
-                    <p>Preparaciones en menos de 30 minutos con ingredientes que encuentras en cualquier supermercado.</p>
+                    <p>Preparaciones en menos de 30 minutos con ingredientes accesibles.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
@@ -475,9 +585,9 @@
                     <p>No necesitas ingredientes costosos ni exóticos. Comida real al alcance de tu bolsillo.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"></div>
+                    <div class="feature-icon">📊</div>
                     <h3>Información Nutricional</h3>
-                    <p>Cada receta incluye calorías, macronutrientes y porciones para que controles tu progreso.</p>
+                    <p>Cada receta incluye calorías, macronutrientes y porciones para controlar tu progreso.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
@@ -485,9 +595,9 @@
                     <p>Más de 5,000 personas ya han transformado su cuerpo y su relación con la comida.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"></div>
+                    <div class="feature-icon">📱</div>
                     <h3>Acceso Inmediato</h3>
-                    <p>Descarga digital instantánea. Accede desde tu móvil, tablet o computadora cuando quieras.</p>
+                    <p>Descarga digital instantánea. Accede desde tu móvil, tablet o computadora.</p>
                 </div>
             </div>
         </div>
@@ -498,10 +608,12 @@
         <div class="container">
             <h2 class="section-title">Un Vistazo a Lo Que Obtendrás</h2>
             <div class="recipes-grid">
+                
                 <div class="recipe-card">
-                    <div class="recipe-image"><span class="badge">🔥 ¡Más Popular!</span><img src="IMG_2729.jpeg"></div>
-
-
+                    <div class="recipe-image">
+                        <span class="badge">🔥 ¡Más Popular!</span>
+                        <img src="IMG_2729.jpeg" alt="Desayunos Energéticos">
+                    </div>
                     <div class="recipe-info">
                         <h3>Desayunos Energéticos</h3>
                         <p>25 recetas para comenzar el día con energía y acelerar tu metabolismo.</p>
@@ -511,9 +623,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="recipe-image"><span class="badge">⚡ En 15 Min</span><img src="IMG_2730.jpeg"></div>
 
-
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <span class="badge">⚡ En 15 Min</span>
+                        <img src="IMG_2730.jpeg" alt="Almuerzos Ligeros">
+                    </div>
                     <div class="recipe-info">
                         <h3>Almuerzos Ligeros</h3>
                         <p>35 opciones deliciosas que te mantendrán satisfecho hasta la cena.</p>
@@ -522,62 +637,67 @@
                             <span>🔥 350-500 cal</span>
                         </div>
                     </div>
+                </div>
 
-<div class="recipe-card">
-    <div class="recipe-image"><span class="badge">🥗 Bajo en Calorías</span><img src="IMG_2731.jpeg"></div>
-    <div class="recipe-info">
-        <h3>Cenas Reconfortantes</h3>
-        <p>30 recetas ligeras pero sabrosas para terminar el día perfecto.</p>
-        <div class="recipe-meta">
-            <span>⏱️ 20-30 min</span>
-            <span>🔥 300-450 cal</span>
-        </div>
-    </div>
-</div>
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <span class="badge">🥗 Bajo en Calorías</span>
+                        <img src="IMG_2731.jpeg" alt="Cenas Reconfortantes">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Cenas Reconfortantes</h3>
+                        <p>30 recetas ligeras pero sabrosas para terminar el día perfecto.</p>
+                        <div class="recipe-meta">
+                            <span>⏱️ 20-30 min</span>
+                            <span>🔥 300-450 cal</span>
+                        </div>
+                    </div>
+                </div>
 
-<div class="recipe-card">
-    <div class="recipe-image"><span class="badge">⭐ Recomendado</span><img src="IMG_2733.jpeg"></div>
-    <div class="recipe-info">
-        <h3>Snacks Saludables</h3>
-        <p>30 opciones para matar el hambre entre comidas sin arruinar tu dieta.</p>
-        <div class="recipe-meta">
-            <span>⏱️ 5-15 min</span>
-            <span>🔥 100-200 cal</span>
-        </div>
-    </div>
-</div>
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <span class="badge">⭐ Recomendado</span>
+                        <img src="IMG_2733.jpeg" alt="Snacks Saludables">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Snacks Saludables</h3>
+                        <p>30 opciones para matar el hambre entre comidas sin arruinar tu dieta.</p>
+                        <div class="recipe-meta">
+                            <span>⏱️ 5-15 min</span>
+                            <span>🔥 100-200 cal</span>
+                        </div>
+                    </div>
+                </div>
 
-</div>
-</div>
-</section>
-
-<!-- Benefits List -->
-<section class="benefits">
-<div class="container">
-    <h2 class="section-title">Lo Que Lograrás Con Este Programa</h2>
-    <ul class="benefits-list">
-        <li>Perderás entre 2-4 kg por semana de forma saludable</li>
-        <li>Mejorarás tu energía y vitalidad desde la primera semana</li>
-        <li>Aprenderás a comer rico sin sentir que estás a dieta</li>
-        <li>Reducirás la inflamación y te sentirás más ligero</li>
-        <li>Desarrollarás hábitos alimenticios duraderos</li>
-        <li>Ahorrarás tiempo y dinero en comidas preparadas</li>
-        <li>Mejorarás tu relación con la comida para siempre</li>
-    </ul>
-</div>
-
+            </div>
         </div>
     </section>
 
-    <!-- Lead Magnet Form -->
+    <!-- Benefits List -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Lo Que Lograrás Con Este Programa</h2>
+            <ul class="benefits-list">
+                <li>Perderás entre 2-4 kg por semana de forma saludable</li>
+                <li>Mejorarás tu energía y vitalidad desde la primera semana</li>
+                <li>Aprenderás a comer rico sin sentir que estás a dieta</li>
+                <li>Reducirás la inflamación y te sentirás más ligero</li>
+                <li>Desarrollarás hábitos alimenticios duraderos</li>
+                <li>Ahorrarás tiempo y dinero en comidas preparadas</li>
+                <li>Mejorarás tu relación con la comida para siempre</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Lead Magnet & Payment Form -->
     <section class="lead-magnet" id="descargar">
         <div class="container">
             <h2 class="section-title">¡Comienza Tu Transformación Hoy!</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 1rem;">Obtén acceso inmediato a las 120 recetas + <strong>BONUS GRATIS</strong>:</p>
+            <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Obtén acceso inmediato a las 120 recetas + <strong>BONUS GRATIS</strong>:</p>
             <p style="color: #667eea; font-weight: bold; margin-bottom: 2rem;">📕 Guía de Compras Inteligente + 📅 Plan de 7 Días</p>
             
             <div class="lead-form">
-                <form>
+                <form id="purchase-form">
                     <div class="form-group">
                         <input type="text" placeholder="Tu Nombre Completo" required>
                     </div>
@@ -590,15 +710,37 @@
                     <button type="submit" class="submit-btn">
                         🎁 SÍ, QUIERO MIS 120 RECETAS AHORA
                     </button>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d;">
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #7f8c8d; text-align: center;">
                         🔒 Tu información está 100% segura. Sin spam.
                     </p>
                 </form>
             </div>
             
-            <p style="color: #e74c3c; font-weight: bold; font-size: 1.1rem;">
-                ⚡ Oferta Especial: Solo $17 USD (Precio regular $47)
+            <p style="color: #e74c3c; font-weight: bold; font-size: 1.1rem; margin-top: 1.5rem;">
+                ⚡ Oferta Especial: Solo $20 USD (Precio regular $47)
             </p>
+
+            <!-- Métodos de Pago Integrados -->
+            <div class="payment-box">
+                <h3>Métodos de Pago Disponibles</h3>
+                
+                <div class="total-amount">
+                    Total a pagar: $20 USD
+                </div>
+
+                <div class="bank-transfer">
+                    <p style="margin: 0 0 10px 0; font-weight: bold; color: #27ae60;">Transferencia Bancaria</p>
+                    <p style="margin: 5px 0;"><strong>Banco:</strong> Santander</p>
+                    <p style="margin: 5px 0;"><strong>CBU:</strong> 0720369388000000895554</p>
+                    <p style="margin: 5px 0;"><strong>Alias:</strong> CASES.MANCHE.TELAS</p>
+                </div>
+
+                <div class="paypal-section">
+                    <p style="margin: 0 0 5px 0; font-weight: bold; color: #0070ba;">Pago con PayPal</p>
+                    <a href="https://paypal.me/valeriagutierrez548" target="_blank" class="paypal-btn">Pagar por PayPal.Me</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -625,51 +767,34 @@
 
     <!-- Guarantee -->
     <section class="guarantee">
-        <div class="guarantee-icon">🛡️</div>
-        <h2>Garantía de 30 Días</h2>
-        <p style="font-size: 1.2rem; max-width: 600px; margin: 1rem auto;">
-            Si no estás completamente satisfecho con los resultados, te devolvemos tu dinero. Sin preguntas. Sin complicaciones.
-        </p>
+        <div class="container">
+            <div class="guarantee-icon">🛡️</div>
+            <h2>Garantía de 30 Días</h2>
+            <p style="font-size: 1.1rem; max-width: 600px; margin: 1rem auto;">
+                Si no estás completamente satisfecho con los resultados, te devolvemos tu dinero. Sin preguntas. Sin complicaciones.
+            </p>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 NutriDelicias. Todos los derechos reservados.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-            <a href="#" style="color: #3498db;">Política de Privacidad</a> | 
-            <a href="#" style="color: #3498db;">Términos y Condiciones</a>
-        </p>
+        <div class="container">
+            <p>&copy; 2026 NutriDelicias. Todos los derechos reservados.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <a href="#">Política de Privacidad</a> | 
+                <a href="#">Términos y Condiciones</a>
+            </p>
+        </div>
     </footer>
 
     <!-- Urgency Banner -->
     <div class="urgency-banner">
         🔥 ¡OFERTA POR TIEMPO LIMITADO! 63% DE DESCUENTO - SOLO HOY 🔥
-    
-<div style="background-color: #ffffff !important; opacity: 1 !important; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center; color: #333; box-shadow: 0 5px 20px rgba(0,0,0,0.3); position: relative; z-index: 9999;">
-    <h3 style="margin-bottom: 15px; color: #2c3e50;">Métodos de Pago</h3>
-    
-    <!-- Monto a pagar -->
-    <div style="margin-bottom: 20px; padding: 12px; background: #e8f4fd; border-radius: 8px; font-size: 18px; color: #2c3e50; font-weight: bold;">
-        Total a pagar: $20 USD
     </div>
 
-    <!-- Transferencia Bancaria (CBU / Alias) -->
-    <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px;">
-        <p style="margin: 0 0 10px 0; font-weight: bold; color: #27ae60;">Transferencia Bancaria</p>
-        <p style="margin: 5px 0;"><strong>Banco:</strong> Santander</p>
-        <p style="margin: 5px 0;"><strong>CBU:</strong> 0720369388000000895554</p>
-        <p style="margin: 5px 0;"><strong>Alias:</strong> CASES.MANCHE.TELAS</p>
-    </div>
-
-    <!-- Enlace de PayPal.Me -->
-    <div style="padding: 15px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px;">
-        <p style="margin: 0 0 10px 0; font-weight: bold; color: #0070ba;">Pago con PayPal</p>
-        <a href="https://paypal.me/valeriagutierrez548" target="_blank" style="display: inline-block; background-color: #0070ba; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Pagar por PayPal.Me</a>
-    </div>
-</div>
-
+    <!-- Script General -->
     <script>
-        // Smooth scrolling
+        // Smooth scrolling para los enlaces del menú
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -683,112 +808,11 @@
             });
         });
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
+        // Simulación de envío de formulario
+        document.getElementById('purchase-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('¡Gracias por tu interés! Te redirigiremos a la página de pago para completar tu compra.');
+            alert('¡Gracias por tus datos! Por favor, realiza tu pago mediante Transferencia Bancaria o PayPal utilizando los datos de la sección inferior para procesar tu pedido.');
         });
-
-        // Countdown timer effect
-        setInterval(() => {
-            const banners = document.querySelectorAll('.urgency-banner');
-            banners.forEach(banner => {
-                banner.style.opacity = banner.style.opacity === '0.7' ? '1' : '0.7';
-            });
-        }, 1000);
     </script>
-<style>
-/* Transición suave para las tarjetas */
-.recipe-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto al pasar el cursor */
-.recipe-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Zoom suave en la imagen */
-.recipe-image {
-    overflow: hidden;
-}
-
-.recipe-image img {
-    transition: transform 0.3s ease;
-}
-
-.recipe-card:hover .recipe-image img {
-    transform: scale(1.05);
-
-    }
-    /* Estilos de la sección de bienvenida */
-    .welcome-benefits {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        border-radius: 16px;
-        padding: 25px 20px;
-        margin: 20px 0 30px 0;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-    .welcome-benefits h2 {
-        color: #2c3e50;
-        font-size: 1.4rem;
-        margin-bottom: 20px;
-    }
-    .benefits-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-    .benefit-item {
-        background: white;
-        padding: 15px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-        text-align: left;
-        border-left: 4px solid #ff4757;
-    }
-    .benefit-icon {
-        font-size: 1.5rem;
-        float: left;
-        margin-right: 12px;
-    }
-    .benefit-item h4 {
-        margin: 0 0 5px 0;
-        color: #333;
-        font-size: 1rem;
-    }
-    .benefit-item p {
-        margin: 0;
-        color: #666;
-        font-size: 0.85rem;
-        line-height: 1.4;
-    }
-    @media (min-width: 768px) {
-        .benefits-grid {
-            flex-direction: row;
-        }
-        .benefit-item {
-            flex: 1;
-            text-align: center;
-            border-left: none;
-            border-top: 4px solid #ff4757;
-        }
-        .benefit-icon {
-            float: none;
-            display: block;
-            margin: 0 auto 10px auto;
-        }
-    }
-</style>
-
-</style>
-
-<div style="background-color: #ffffff !important; padding: 25px; border-radius: 12px; margin: 25px 0; text-align: center; color: #333; box-shadow: 0 4px 15px rgba(0,0,0,0.15); position: relative; z-index: 999;">
-    <h3 style="margin-bottom: 15px; color: #2c3e50;">Métodos de Pago</h3>
-  
-
-
 </body>
 </html>
