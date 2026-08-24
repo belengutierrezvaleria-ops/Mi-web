@@ -259,6 +259,10 @@
             transition: transform 0.4s ease;
         }
 
+        .recipe-card:hover .recipe-image img {
+            transform: scale(1.08);
+        }
+
         .badge {
             position: absolute;
             top: 12px;
@@ -443,10 +447,10 @@
             margin-top: 10px;
         }
 
-        /* --- NUEVO ESTILO: SIMULADOR DE CHAT DE WHATSAPP --- */
+        /* --- SIMULADOR DE CHAT DE WHATSAPP --- */
         .whatsapp-section {
             padding: 4rem 1rem;
-            background: #efeae2; /* Fondo típico de WhatsApp Web */
+            background: #efeae2;
         }
 
         .whatsapp-container {
@@ -821,10 +825,9 @@
     <!-- Simulador de Mensajes Reales del Grupo de WhatsApp -->
     <section class="whatsapp-section" id="testimonios">
         <div class="container">
-            <h2 class="section-title">Mensajes Reales del Grupo de WhatsApp</h2>
+            <h2 class="section-title">Lo que dicen nuestras clientas</h2>
             
             <div class="whatsapp-container">
-                <!-- Barra superior de WhatsApp -->
                 <div class="whatsapp-header-bar">
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Grupo" class="whatsapp-header-avatar">
                     <div class="whatsapp-header-info">
@@ -833,30 +836,29 @@
                     </div>
                 </div>
 
-                <!-- Cuerpo de los mensajes -->
                 <div class="whatsapp-body">
                     
                     <div class="wa-message incoming">
                         <div class="wa-sender">~ María González</div>
-                        ¡Hola a todos! Hoy me pesé y no lo puedo creer, **bajé 4 kg en mis primeras dos semanas** comiendo SÚPER rico y sin pasar hambre. ¡Gracias por las recetas! 🥰
-                        <span class="wa-time">10:14 a. m.</span>
+                        ¡Hola! 👋 Les cuento que empecé hace 10 días y ya **bajé 3 kg**. No puedo creerlo porque como re rico y no paso nada de hambre. ¡Recomendadísimo! 🥰
+                        <span class="wa-time">09:15 a. m.</span>
                     </div>
 
                     <div class="wa-message incoming">
-                        <div class="wa-sender">~ Carlos Ramírez</div>
-                        A mi esposa y a mí nos encantan los almuerzos rápidos. En el último mes **perdí 7 kg** y ya no tengo pesadez después de comer. ¡100 recomendadas! 🚀
-                        <span class="wa-time">10:18 a. m.</span>
+                        <div class="wa-sender">~ Laura Herrera</div>
+                        Amo los desayunos del recetario, son re rápidos y me dan energía para todo el día. En el primer mes **perdí 6 kg** y mi ropa me queda mucho mejor. ¡Gracias genia! 🚀
+                        <span class="wa-time">10:02 a. m.</span>
                     </div>
 
                     <div class="wa-message outgoing">
-                        ¡Qué alegría leer esto Carlos y María! 💪 Esa es la idea, comer sano sin sufrir. ¡A seguir con todo mi gente! 🔥🥗
-                        <span class="wa-time">10:20 a. m. <span class="wa-check">✓✓</span></span>
+                        ¡Qué alegría leer eso Laura y María! 💪 Ese es el objetivo, disfrutar el proceso. ¡A seguir con todo! 🔥🥗
+                        <span class="wa-time">10:10 a. m. <span class="wa-check">✓✓</span></span>
                     </div>
 
                     <div class="wa-message incoming">
-                        <div class="wa-sender">~ Ana Martínez</div>
-                        Yo sufría un montón con la ansiedad por los dulces por las tardes, pero los snacks del recetario me salvan la vida. **Ya bajé 5 kg** y sigo sumando. ✨
-                        <span class="wa-time">10:25 a. m.</span>
+                        <div class="wa-sender">~ Carla D.</div>
+                        Me compré el pack hace una semana y ya noté el cambio en la panza, sobre todo. **Bajé 2 kg y medio**. Lo mejor es que las recetas son súper fáciles de hacer. 👏
+                        <span class="wa-time">11:30 a. m.</span>
                     </div>
 
                 </div>
@@ -870,47 +872,4 @@
         <div class="container">
             <div class="guarantee-icon">🛡️</div>
             <h2>Garantía de 30 Días</h2>
-            <p style="font-size: 1.1rem; max-width: 600px; margin: 1rem auto;">
-                Si no estás completamente satisfecho con los resultados, te devolvemos tu dinero. Sin preguntas. Sin complicaciones.
-            </p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 NutriDelicias. Todos los derechos reservados.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                <a href="#">Política de Privacidad</a> | 
-                <a href="#">Términos y Condiciones</a>
-            </p>
-        </div>
-    </footer>
-
-    <!-- Urgency Banner -->
-    <div class="urgency-banner">
-        🔥 ¡OFERTA POR TIEMPO LIMITADO! 63% DE DESCUENTO - SOLO HOY 🔥
-    </div>
-
-    <!-- Script General -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        document.getElementById('purchase-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por tus datos! Por favor, realiza tu pago mediante Transferencia Bancaria o PayPal utilizando los datos de la sección inferior para procesar tu pedido.');
-        });
-    </script>
-</body>
-</html>
+            <p style="font-size: 1.1rem; max-width: 600px; margin: 
