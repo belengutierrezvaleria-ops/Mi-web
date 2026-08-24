@@ -16,7 +16,7 @@
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
-            padding-bottom: 60px; /* Espacio para la barra de urgencia */
+            padding-bottom: 60px;
         }
 
         /* Header */
@@ -56,7 +56,6 @@
             opacity: 0.8;
         }
 
-        /* Contenedores generales */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -120,7 +119,7 @@
             box-shadow: 0 6px 20px rgba(255,107,107,0.6);
         }
 
-        /* Welcome Benefits Section */
+        /* Welcome Benefits Component */
         .welcome-benefits {
             background: white;
             border-radius: 16px;
@@ -169,7 +168,7 @@
             font-size: 0.95rem;
         }
 
-        /* Features / Why Need It */
+        /* Features */
         .features {
             padding: 4rem 1rem;
             background: #fff;
@@ -242,10 +241,6 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.4s ease;
-        }
-
-        .recipe-card:hover .recipe-image img {
-            transform: scale(1.08);
         }
 
         .badge {
@@ -326,7 +321,7 @@
             color: white;
         }
 
-        /* Lead Magnet / Checkout Form */
+        /* Lead Magnet & Payment Form */
         .lead-magnet {
             padding: 4rem 1rem;
             background: #fff;
@@ -432,7 +427,7 @@
             margin-top: 10px;
         }
 
-        /* Testimonials */
+        /* --- NUEVOS ESTILOS PARA TESTIMONIOS REALISTAS --- */
         .testimonials {
             padding: 4rem 1rem;
             background: #f8f9fa;
@@ -440,7 +435,7 @@
 
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -448,19 +443,62 @@
         .testimonial-card {
             background: white;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #edf2f7;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid #667eea;
+        }
+
+        .testimonial-user-info h4 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-handle {
+            font-size: 0.85rem;
+            color: #718096;
+        }
+
+        .testimonial-badge-peso {
+            background: #e6fffa;
+            color: #319795;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 3px;
+        }
+
+        .testimonial-stars {
+            color: #f6ad55;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
         }
 
         .testimonial-card p {
-            font-style: italic;
-            margin-bottom: 1rem;
-            color: #555;
-        }
-
-        .testimonial-author {
-            font-weight: bold;
-            color: #667eea;
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            font-style: normal;
         }
 
         /* Guarantee */
@@ -504,7 +542,6 @@
             box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Media Queries para PC */
         @media (min-width: 768px) {
             .hero h1 { font-size: 3rem; }
             .hero p { font-size: 1.4rem; }
@@ -744,23 +781,60 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials - Rediseñado Ultra Realista -->
     <section class="testimonials" id="testimonios">
         <div class="container">
             <h2 class="section-title">Historias de Éxito Reales</h2>
             <div class="testimonial-grid">
+                
+                <!-- Testimonio 1 -->
                 <div class="testimonial-card">
-                    <p>"Bajé 12 kg en 3 meses sin pasar hambre. Las recetas son deliciosas y mi familia también las disfruta. ¡La mejor inversión que hice!"</p>
-                    <div class="testimonial-author">- María González, México</div>
+                    <div>
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="María González" class="testimonial-avatar">
+                            <div class="testimonial-user-info">
+                               <h4>María González</h4>
+                               <span class="testimonial-handle">@mariagonzalez_fit</span><br>
+                               <span class="testimonial-badge-peso">📉 Bajó 12 kg</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Bajé 12 kg en 3 meses sin pasar nada de hambre. Lo que más me gusta es que las recetas son súper fáciles y mi familia también las come conmigo. ¡La mejor inversión!"</p>
+                    </div>
                 </div>
+
+                <!-- Testimonio 2 -->
                 <div class="testimonial-card">
-                    <p>"Pensé que comer sano era aburrido hasta que probé estas recetas. Perdí 8 kg y tengo más energía que nunca. ¡Totalmente recomendado!"</p>
-                    <div class="testimonial-author">- Carlos Ramírez, España</div>
+                    <div>
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Carlos Ramírez" class="testimonial-avatar">
+                            <div class="testimonial-user-info">
+                               <h4>Carlos Ramírez</h4>
+                               <span class="testimonial-handle">@carlos.fitlife</span><br>
+                               <span class="testimonial-badge-peso">📉 Bajó 8 kg</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Pensé que comer sano era aburrido y puro pollo con lechuga hasta que probé este recetario. Perdí 8 kg y tengo más energía para entrenar. ¡Totalmente recomendado!"</p>
+                    </div>
                 </div>
+
+                <!-- Testimonio 3 -->
                 <div class="testimonial-card">
-                    <p>"Como madre trabajadora, necesito recetas rápidas. Estas son perfectas. Bajé 6 kg en 2 meses y mis hijos adoran la comida."</p>
-                    <div class="testimonial-author">- Ana Martínez, Colombia</div>
+                    <div>
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Ana Martínez" class="testimonial-avatar">
+                            <div class="testimonial-user-info">
+                               <h4>Ana Martínez</h4>
+                               <span class="testimonial-handle">@anita_recetas</span><br>
+                               <span class="testimonial-badge-peso">📉 Bajó 6 kg</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Como trabajo todo el día, necesitaba algo rápido. Estas recetas me salvan la vida porque se hacen en 20 minutos. Bajé 6 kg en 2 meses sin sufrir. ¡Mis hijos adoran los snacks!"</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -794,7 +868,6 @@
 
     <!-- Script General -->
     <script>
-        // Smooth scrolling para los enlaces del menú
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -808,7 +881,6 @@
             });
         });
 
-        // Simulación de envío de formulario
         document.getElementById('purchase-form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('¡Gracias por tus datos! Por favor, realiza tu pago mediante Transferencia Bancaria o PayPal utilizando los datos de la sección inferior para procesar tu pedido.');
