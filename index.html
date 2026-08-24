@@ -631,6 +631,31 @@
             });
         }, 1000);
     </script>
+<style>
+/* Transición suave para las tarjetas */
+.recipe-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Zoom suave en la imagen */
+.recipe-image {
+    overflow: hidden;
+}
+
+.recipe-image img {
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .recipe-image img {
+    transform: scale(1.05);
+}
+</style>
 
 
 </body>
