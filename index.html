@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>120 Recetas Saludables - Baja de Peso Sin Pasar Hambre</title>
+    </head>
+<body>
+<div class="welcome-benefits">
+    <h2>🎯 Lo que vas a lograr con NutriDelicias</h2>
+    <div class="benefits-grid">
+        <div class="benefit-item">
+            <span class="benefit-icon">🍽️</span>
+            <h4>Sin pasar hambre</h4>
+            <p>Porciones generosas y saciantes que te mantendrán lleno hasta la cena.</p>
+        </div>
+        <div class="benefit-item">
+            <span class="benefit-icon">⏱️</span>
+            <h4>Ahorra tiempo</h4>
+            <p>Platos deliciosos y rápidos listos en menos de 30 minutos.</p>
+        </div>
+        <div class="benefit-item">
+            <span class="benefit-icon">🛒</span>
+            <h4>Supermercado fácil</h4>
+            <p>Ingredientes comunes, accesibles y económicos que ya conoces.</p>
+        </div>
+    </div>
+</div>
+
     <style>
         * {
             margin: 0;
@@ -653,7 +676,69 @@
 
 .recipe-card:hover .recipe-image img {
     transform: scale(1.05);
-}
+
+    }
+    /* Estilos de la sección de bienvenida */
+    .welcome-benefits {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 16px;
+        padding: 25px 20px;
+        margin: 20px 0 30px 0;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .welcome-benefits h2 {
+        color: #2c3e50;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    .benefits-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .benefit-item {
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        text-align: left;
+        border-left: 4px solid #ff4757;
+    }
+    .benefit-icon {
+        font-size: 1.5rem;
+        float: left;
+        margin-right: 12px;
+    }
+    .benefit-item h4 {
+        margin: 0 0 5px 0;
+        color: #333;
+        font-size: 1rem;
+    }
+    .benefit-item p {
+        margin: 0;
+        color: #666;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    @media (min-width: 768px) {
+        .benefits-grid {
+            flex-direction: row;
+        }
+        .benefit-item {
+            flex: 1;
+            text-align: center;
+            border-left: none;
+            border-top: 4px solid #ff4757;
+        }
+        .benefit-icon {
+            float: none;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+    }
+</style>
+
 </style>
 
 
